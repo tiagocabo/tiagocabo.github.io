@@ -1,267 +1,280 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Tiago Cabo's portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tiago Cabo</title>
+  <meta name="description" content="Machine learning experiments by Tiago Cabo: search, recommender systems, deep learning and data pipelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiago Cabo">
+  <meta property="og:title" content="Tiago Cabo">
+  <meta property="og:description" content="Machine learning experiments, from search to streaming: notebooks, proofs of concept and write-ups.">
+  <meta property="og:url" content="https://tiagocabo.github.io/">
+  <meta property="og:image" content="https://tiagocabo.github.io/images/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tiagocabo.github.io/images/og/home.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-in">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">TC</span>
+        <span class="brand-text"><strong>Tiago Cabo</strong><span>Lead AI Engineer &middot; Porto</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="about.html">About</a>
+        <a href="mlflow_article.html">Writing</a>
+        <a href="https://github.com/tiagocabo/" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="nav-label">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15zm4.94 12.24V6.17H2.54v7.22h2.4zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zm4.91 8.21V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4z"/></svg><span class="nav-label">LinkedIn</span></a>
+      </nav>
+    </div>
+  </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <div class="page">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p>A showcase of my interests</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <section class="intro">
+      <h1>Machine learning experiments, <span>from search to streaming.</span></h1>
+      <p>Notebooks, proofs of concept and write-ups on information retrieval, recommender systems, deep learning and data pipelines.</p>
+    </section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Tiago Cabo Portfolio</a>
-					</header>
+    <main class="grid">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/tiagocabo/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      <article class="card" id="evaluating-ir-with-the-beir-benchmark">
+        <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/How-to-evaluate-BM25.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/beir_benchmark/beir.png" alt="BEIR benchmark logo" loading="lazy"></div>
+          <h2>Evaluating IR with the BEIR benchmark</h2>
+          <p>How to evaluate retrieval with BEIR, plus incremental indexing so new documents don't force a full re-index.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2023-12-03">Dec 2023</time> &middot; notebook · beir · ndcg</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/evaluating-ir-with-the-beir-benchmark.html" aria-label="Copy link to Evaluating IR with the BEIR benchmark"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a></a>BM25 POC </a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/BM25-POC.ipynb" target="_blank" class="image fit"><img src="images/posts/bm25.gif" alt="" /></a>
-									<p>Using BM25 algorithm we can build a quick search system. Here's a quick POC on how to do that. Link to the <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/BM25-POC.ipynb" target="_blank"><strong>notebook</strong></a> </p>
-									<ul class="actions special">
-										<li><a href="http://54.237.94.76:9090" target="_blank" class="button">Go to</a></li>
-									</ul>
-							</article>
+      <article class="card" id="bm25-search-poc">
+        <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/BM25-POC.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/posts/bm25.mp4" poster="images/posts/bm25.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>BM25 search POC</h2>
+          <p>A quick search system over MovieLens built on the BM25 ranking function.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2023-10-08">Oct 2023</time> &middot; notebook · python · bm25</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/bm25-search-poc.html" aria-label="Copy link to BM25 search POC"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/tensorflow-lite-tutorial/blob/master/PostTrainingQuantization.md" target="_blank" >Post Training Quantization with TF Lites </a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/tensorflow-lite-tutorial/blob/master/PostTrainingQuantization.md" target="_blank" class="image fit"><img src="images/TFlite/TensorfloLitePredict.png" alt="" /></a>
-									<p>This repo has a POC of a MNIST classification model with quantization. The goal was to speed inference and reduce model size. I was able to reduce inference time more than 80x times.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/tensorflow-lite-tutorial/blob/master/PostTrainingQuantization.md" target="_blank" class="button">Go to Notebook</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/How-to-evaluate-BM25.ipynb" target="_blank" >Evaluate IR using BEIR benchmark </a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/How-to-evaluate-BM25.ipynb" target="_blank" class="image fit"><img src="images/beir_benchmark/beir.png" alt="" /></a>
-									<p>This notebook has a summary about recommender systems evaluation and how to use the beir benchmark in IR POC.
-									   There is presented how to perform incremental indexing, to avoid reindexing the full index, after each new query. 
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/How-to-evaluate-BM25.ipynb" target="_blank" class="button">Go to Notebook</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://colab.research.google.com/drive/1YMP2nZMRFgaz5WjfhxsC9l6roFVbePCi?usp=sharing" target="_blank" >Experiment with diffusion models </a></h2>
-									</header>
-									<a href="https://colab.research.google.com/drive/1YMP2nZMRFgaz5WjfhxsC9l6roFVbePCi?usp=sharing" target="_blank" class="image fit"><img src="images/diffusion/Panda_playing_chess.png" alt="" /></a>
-									<p>This repo has a small experience with the open source diffusion model from Hugging Face. The image above was created by "A Panda playing chess."
-									</p>
-									<ul class="actions special">
-										<li><a href="https://colab.research.google.com/drive/1YMP2nZMRFgaz5WjfhxsC9l6roFVbePCi?usp=sharing" target="_blank" class="button">Go to Notebook</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" >Recommender Systems</h2>
-									</header>
-									<a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" class="image fit">
-										<img src="images/recommender_systems/recommender_systems.png" alt="" /></a>
-									<p>I am currently working on this field of ML. Inside you will find experiences with several recommender systems tecniques</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header class="major">
-										<h2><a></a>Experience tracking with mlflow </a></h2>
-										</header>
-										<a href="mlflow_article.html" class="image fit"><img src="images/mlflow_logo.png" alt="" /></a>
-										<p>With Mlflow tracking you can organize all your ML project experiences in one single platform.
-											Read the article to know more and click the github icon to access the repo.</p>
-										<ul class="actions special">
-											<li><a href="mlflow_article.html" class="button">Full Story</a></li>
-										</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/number_guesser" target="_blank" >Guessing numbers using AI </a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/number_guesser" target="_blank" class="image fit"><img src="images/guess_number/ezgif.com-video-to-gif (1).gif" width="200" height="400" alt="" /></a>
-									<p>This repo contains my studies with images. At this pois I play around with DNN and CNN. Plz check repo to check the code.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/number_guesser" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank">ALS implemented using Spark</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank" class="image fit"><img src="images/spark/Apache_Spark_logo.svg.png" alt="" /></a>
-									<p>In this notebook, I show an example of a recommender_systems built with ALS (alternating least squares) and implemented in spark. 
-										Used spark-SQL and spark-ML.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank">Bidirectional LSTM example</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank" class="image fit"><img src="images/time_series/Bidirectional-LSTM.png" width="200" height="400" alt="" /></a>
-									<p>In this notebook, I show an example of a forecasting exercise using a Bidirectional LSTM. 
-										The dataset used is based on the city of London shared bikes. Plz check the notebook 
-										for more details.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank">Linear regression from scratch</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank" class="image fit"><img src="images/time_series/Linear_regression.svg.png" width="200" height="400" alt="" /></a>
-									<p>In this notebook,I explain how to develop a linear regression model from scratch.
-										I explain how the gradient descend is calculated and implemented. 
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank">Spark streaming</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank" class="image fit"><img src="images/spark/spark_stream.gif" width="200" height="400" alt="" /></a>
-									<p>In this notebook, I explain how to setup a spark streamming pipeline.
-										 I showcase a example using hate speach detection from twiter feeds. 
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank">My first kafka setup!</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank" class="image fit"><img src="images/kafka/kafka_test.gif" width="200" height="400" alt="" /></a>
-									<p>In this notebook, I explain how to setup a kafka worker on my machine.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
+      <article class="card" id="post-training-quantization-with-tf-lite">
+        <a href="https://github.com/tiagocabo/tensorflow-lite-tutorial/blob/master/PostTrainingQuantization.md" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/TFlite/TensorfloLitePredict.png" alt="TensorFlow Lite prediction" loading="lazy"></div>
+          <h2>Post-training quantization with TF Lite</h2>
+          <p>Quantizing an MNIST classifier cut inference time by more than 80&times; and shrank the model.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2022-09-10">Sep 2022</time> &middot; write-up · tensorflow · tflite</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/post-training-quantization-with-tf-lite.html" aria-label="Copy link to Post-training quantization with TF Lite"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-								<article>
-									<header>
-										<h2><a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank">My first Jenkins setup!</a></h2>
-									</header>
-									<a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank" class="image fit"><img src="images/jenkins/docker-jenkins.png" alt="" /></a>
-									<p>With this tutorial, I was able to create my first docker image, and to build, test and deploy a python application. 
-										The idea now is to apply this knowledge in next deploys of my portfolio.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank" class="button">Go to tutorial</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame_tutorial.py" target="_blank" >My first pygame! </h2>
-									</header>
-									<a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame_tutorial.py" target="_blank" class="image fit"><img src="images/pygame/ezgif.com-video-to-gif.gif" width="200" height="400" alt="" /></a>
-									<p>To build the number guesser project I had to develop the draw tool in pygame. Here is the small project I did to learn the basic skills. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame_tutorial.py" target="_blank" class="button">Go to Repo</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/tiagocabo/Acer-E1-570G/blob/master/README.md" target="_blank">5yrs old Acer E1- 570G refurbish</a></h2>
-									</header>
-									<a href="https://github.com/tiagocabo/Acer-E1-570G/blob/master/README.md" target="_blank" class="image fit"><img src="images/Acer/thermal_paste.png" alt="" /></a>
-									<p> Here I tried to give a second life to my 5yrs old laptop by moving from windows to Ubuntu 18.04 and then to 20.04. Also replaced the thermal paste and clean the dust.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/tiagocabo/Acer-E1-570G/blob/master/README.md" target="_blank" class="button">Go to tutorial</a></li>
-									</ul>
-								</article>
+      <article class="card" id="experimenting-with-diffusion-models">
+        <a href="https://colab.research.google.com/drive/1YMP2nZMRFgaz5WjfhxsC9l6roFVbePCi?usp=sharing" target="_blank" rel="noopener">
+          <div class="thumb"><img class="cover" src="images/diffusion/Panda_playing_chess.png" alt="Generated image of a panda playing chess" loading="lazy"></div>
+          <h2>Experimenting with diffusion models</h2>
+          <p>Hugging Face's open diffusion model, prompted with &ldquo;A panda playing chess.&rdquo;</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2022-09-09">Sep 2022</time> &middot; colab · diffusers · hugging face</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/experimenting-with-diffusion-models.html" aria-label="Copy link to Experimenting with diffusion models"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-							</section>
+      <article class="card" id="refurbishing-a-5-year-old-acer-e1-570g">
+        <a href="https://github.com/tiagocabo/Acer-E1-570G/blob/master/README.md" target="_blank" rel="noopener">
+          <div class="thumb"><img class="cover" src="images/Acer/thermal_paste.png" alt="Laptop CPU with fresh thermal paste" loading="lazy"></div>
+          <h2>Refurbishing a 5-year-old Acer E1-570G</h2>
+          <p>Windows to Ubuntu 18.04 then 20.04, new thermal paste and a good dust clean.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-05-05">May 2020</time> &middot; write-up · ubuntu · hardware</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/refurbishing-a-5-year-old-acer-e1-570g.html" aria-label="Copy link to Refurbishing a 5-year-old Acer E1-570G"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-					</div>
+      <article class="card" id="first-jenkins-setup">
+        <a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank" rel="noopener">
+          <div class="thumb"><img class="cover" src="images/jenkins/docker-jenkins.png" alt="Docker and Jenkins" loading="lazy"></div>
+          <h2>First Jenkins setup</h2>
+          <p>Building, testing and deploying a Python app from a Docker-hosted Jenkins.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-26">Apr 2020</time> &middot; tutorial · jenkins · docker</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/first-jenkins-setup.html" aria-label="Copy link to First Jenkins setup"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-				<!-- Footer -->
-					<footer id="footer">
+      <article class="card" id="spark-streaming-pipeline">
+        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/spark/spark_stream.mp4" poster="images/spark/spark_stream.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>Spark Streaming pipeline</h2>
+          <p>A streaming pipeline that flags hate speech in a Twitter feed.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-24">Apr 2020</time> &middot; notebook · spark streaming · nlp</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/spark-streaming-pipeline.html" aria-label="Copy link to Spark Streaming pipeline"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Porto, Portugal</p>
-							</section>
+      <article class="card" id="first-kafka-setup">
+        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/kafka/kafka_test.mp4" poster="images/kafka/kafka_test.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>First Kafka setup</h2>
+          <p>Running a Kafka worker locally, step by step.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-24">Apr 2020</time> &middot; notebook · kafka</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/first-kafka-setup.html" aria-label="Copy link to First Kafka setup"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">ttiago.ccabo@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/tiagocabo/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+      <article class="card" id="linear-regression-from-scratch">
+        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/time_series/Linear_regression.svg.png" alt="Linear regression plot" loading="lazy"></div>
+          <h2>Linear regression from scratch</h2>
+          <p>Deriving and implementing gradient descent for linear regression.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-16">Apr 2020</time> &middot; notebook · numpy · gradient descent</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/linear-regression-from-scratch.html" aria-label="Copy link to Linear regression from scratch"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li> &copy; Tiago Cabo</li><li>Design: <a href="https://html5up.net">
-							adapted with  <span style="color:red;">&hearts; </span> 
- 							HTML5 UP </a></li></ul>
-					</div>
-			</div>
+      <article class="card" id="bidirectional-lstm-forecasting">
+        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/time_series/Bidirectional-LSTM.png" alt="Bidirectional LSTM diagram" loading="lazy"></div>
+          <h2>Bidirectional LSTM forecasting</h2>
+          <p>Forecasting London shared-bike demand with a bidirectional LSTM.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-15">Apr 2020</time> &middot; notebook · keras · time series</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/bidirectional-lstm-forecasting.html" aria-label="Copy link to Bidirectional LSTM forecasting"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <article class="card" id="als-recommendations-with-spark">
+        <a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/spark/Apache_Spark_logo.svg.png" alt="Apache Spark logo" loading="lazy"></div>
+          <h2>ALS recommendations with Spark</h2>
+          <p>Movie recommendations with alternating least squares, using Spark SQL and Spark ML.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-14">Apr 2020</time> &middot; notebook · pyspark · als</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/als-recommendations-with-spark.html" aria-label="Copy link to ALS recommendations with Spark"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
 
-	</body>
+      <article class="card" id="guessing-numbers-with-ai">
+        <a href="https://github.com/tiagocabo/number_guesser" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/guess_number/number_guesser.mp4" poster="images/guess_number/number_guesser.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>Guessing numbers with AI</h2>
+          <p>Handwritten digit recognition with DNNs and CNNs, with a drawing pad to test it.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-10">Apr 2020</time> &middot; repo · cnn · pygame</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/guessing-numbers-with-ai.html" aria-label="Copy link to Guessing numbers with AI"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
+
+      <article class="card" id="first-pygame">
+        <a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame-exploration/pygame_tutorial.py" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/pygame/pygame_draw.mp4" poster="images/pygame/pygame_draw.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>First pygame</h2>
+          <p>The drawing tool behind the number guesser, built to learn pygame.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-09">Apr 2020</time> &middot; code · pygame</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/first-pygame.html" aria-label="Copy link to First pygame"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
+
+      <article class="card" id="recommender-systems">
+        <a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/recommender_systems/recommender_systems.png" alt="Recommender systems diagram" loading="lazy"></div>
+          <h2>Recommender systems</h2>
+          <p>Experiments with several recommender system techniques.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-04-02">Apr 2020</time> &middot; repo · python · collaborative filtering</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/recommender-systems.html" aria-label="Copy link to Recommender systems"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
+
+      <article class="card" id="experiment-tracking-with-mlflow">
+        <a href="mlflow_article.html">
+          <div class="thumb"><img src="images/mlflow_logo.png" alt="MLflow logo" loading="lazy"></div>
+          <h2>Experiment tracking with MLflow</h2>
+          <p>Keep every run, parameter and metric of an ML project in one place.</p>
+        </a>
+        <div class="card-foot">
+          <span class="meta"><time datetime="2020-03-31">Mar 2020</time> &middot; article · mlflow · scikit-learn</span>
+          <button type="button" class="copy-link" data-url="https://tiagocabo.github.io/p/experiment-tracking-with-mlflow.html" aria-label="Copy link to Experiment tracking with MLflow"><svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.3-2.3a3 3 0 0 0-4.2-4.2l-.9.9M9.5 6.5a3 3 0 0 0-4.2 0L3 8.8a3 3 0 0 0 4.2 4.2l.9-.9"/></svg><span>Copy link</span></button>
+        </div>
+      </article>
+
+    </main>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>I'm a Lead AI Engineer at OutSystems in Porto, Portugal. Before that I worked on recommendations, search and GenAI at OLX and Farfetch, after starting out in mechanical engineering at FEUP. This site collects the notebooks, proofs of concept and write-ups I've made along the way.</p>
+        <p class="about-links"><a href="about.html">Experience, education and skills &rarr;</a></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>&copy; Tiago Cabo &middot; Porto, Portugal</span>
+      <a href="mailto:ttiago.ccabo@gmail.com">ttiago.ccabo@gmail.com</a>
+    </footer>
+
+  </div>
+
+  <script>
+    // Respect reduced-motion: keep the poster frame instead of looping videos.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("video[autoplay]").forEach(function (v) {
+        v.removeAttribute("autoplay");
+        v.pause();
+      });
+    }
+  </script>
+  <script>
+    // Copy a post's shareable link; fall back to putting it in the address bar.
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest(".copy-link");
+      if (!b) return;
+      var url = b.getAttribute("data-url"), label = b.querySelector("span");
+      function done(text) {
+        label.textContent = text;
+        b.classList.add("is-done");
+        clearTimeout(b._t);
+        b._t = setTimeout(function () { label.textContent = "Copy link"; b.classList.remove("is-done"); }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () { done("Copied"); }, fallback);
+      } else fallback();
+      function fallback() {
+        var i = document.createElement("textarea");
+        i.value = url; i.setAttribute("readonly", ""); i.style.position = "fixed"; i.style.opacity = "0";
+        document.body.appendChild(i); i.select();
+        var ok = false; try { ok = document.execCommand("copy"); } catch (err) {}
+        document.body.removeChild(i);
+        done(ok ? "Copied" : url);
+      }
+    });
+  </script>
+</body>
 </html>
