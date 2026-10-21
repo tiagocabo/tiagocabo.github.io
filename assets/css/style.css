@@ -267,7 +267,17 @@ img, video { max-width: 100%; display: block; }
 .timeline .at { font-weight: 400; color: var(--muted); }
 .timeline .where { margin: 2px 0 8px; font-size: 14px; color: var(--muted); }
 .timeline p { margin: 0; }
-.skills-note { color: var(--muted); font-size: 15px; }
+.focus { display: flex; flex-wrap: wrap; gap: 8px; margin: -16px 0 20px; }
+.focus span { font: 12px var(--mono); padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.timeline ul { margin: 8px 0 0; padding-left: 1.1em; }
+.timeline ul li { display: list-item; padding: 0; border: 0; margin-bottom: 6px; }
+.timeline .stack { margin-top: 10px; font: 12px var(--mono); color: var(--muted); }
+.article h3.sub { margin: 36px 0 8px; font-size: 15px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.early { list-style: none; margin: 0; padding: 0; }
+.early li { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 4px 24px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.early .when { font: 13px/1.9 var(--mono); color: var(--muted); }
+.plain { margin: 0; padding-left: 1.1em; }
+.plain li { margin-bottom: 8px; }
 .skills { margin: 0; display: grid; gap: 0; }
 .skills > div {
   display: grid;
@@ -280,7 +290,7 @@ img, video { max-width: 100%; display: block; }
 .skills dd { margin: 0; color: var(--muted); }
 
 @media (max-width: 600px) {
-  .timeline li, .skills > div { grid-template-columns: 1fr; }
+  .timeline li, .skills > div, .early li { grid-template-columns: 1fr; }
   body { font-size: 16px; }
   .page { padding-top: 40px; }
   .site-header-in { padding-block: 10px; }
