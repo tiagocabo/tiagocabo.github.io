@@ -1,153 +1,90 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Experience tracking with mlflow</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets//css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Experiment tracking with MLflow · Tiago Cabo</title>
+  <meta name="description" content="How to organize ML experiments with MLflow tracking, using the Wine Quality dataset.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <header class="site-header">
+      <a class="site-name" href="index.html">Tiago Cabo</a>
+      <nav class="site-nav">
+        <a href="mlflow_article.html">Writing</a>
+        <a href="https://github.com/tiagocabo/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Return Home Page</a>
-					</header>
+    <main class="article">
+      <a class="back" href="index.html">&larr; All projects</a>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/tiagocabo/mlflow_example" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      <h1>Experiment tracking with MLflow</h1>
+      <p class="lede">With MLflow tracking you can organize all your ML project experiments in one single platform. The full code is in the <a href="https://github.com/tiagocabo/mlflow_example" target="_blank" rel="noopener">GitHub repo</a>.</p>
 
-				<!-- Main -->
-					<div id="main">
+      <figure class="logo"><img src="images/mlflow_logo.png" alt="MLflow logo"></figure>
 
-						<!-- Post -->
-							<section class="post">
-								
-								<h1> Experience tracking with mlflow </h1>
+      <p>MLflow is an open source tool backed by Databricks. It works with several languages such as R, Python and Java. It was designed to be multi-user and integrates easily with Apache Spark. It has 3 main blocks:</p>
+      <ul>
+        <li>MLflow Tracking</li>
+        <li>MLflow Projects</li>
+        <li>MLflow Models</li>
+      </ul>
+      <p>MLflow Projects is a tool to reproduce experiment runs, and MLflow Models is a file format to deploy the models. From now on I will only focus on MLflow Tracking.</p>
 
-								<p>With Mlflow tracking you can organize all your ML project experiences in one single platform.
-									Read the article to know more and click the github icon to access the repo.
-								</p>
-								
-								<div class="image main"><img src="images/mlflow_logo.png" alt="" /></div>
+      <h2>Wine dataset example</h2>
+      <p>The Wine Quality dataset was collected in the North Region of Portugal, and the goal is to predict a wine's quality from its chemical features. <a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality" target="_blank" rel="noopener">[source]</a></p>
+      <figure><img src="images/mlflow_article/wine_pic.jpg" alt="Wine glasses" loading="lazy"></figure>
+      <p>Check the <a href="https://github.com/tiagocabo/mlflow_example" target="_blank" rel="noopener">GitHub repo</a> for the full code and analysis.</p>
 
-								<p>
-									Mlflow is an open source tool backed by databricks. It works with several languages such as 
-									R, python and Java. It was designed to be multiuser and integrates easily with Apache Spark. 
-									 It has 3 main blocks:
-									<ul>
-										<li>MLflow Tracking</li>
-										<li>MLflow Projects</li>
-										<li>MLflow Models</li>
-									</ul>
-									MLflow Project is a tool to reproduce experience runs and 
-									MLflow Models is a file format to deploy the models. From now on I will 
-									only focus on MLflow tracking. 
-								</p>
-								
-								<h2> Wine dataset example </h2>
-
-								<p>Wine dataset was collected in the North Region of Portugal and  has the goal
-									of predicting the wine's quality based on chemical features. 
-									<a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality" target="_blank" >[source]</a>
-								</p>
-								<div class="image main"><img src="images/mlflow_article/wine_pic.jpg" alt="" /></div>
-
-								<p> Please check the github icon for full code and analysis.</p>
-								
-								<h3> MLflow step1 - Setup + UI </h3>
-								After installing mlflow using the console select your desire directory and run mlflow ui. 
-								<pre><code>pip install mlflow
+      <h3>Step 1: setup and UI</h3>
+      <p>Install MLflow, go to your chosen directory in the console and run <code>mlflow ui</code>.</p>
+<pre><code>pip install mlflow
 mlflow ui</code></pre>
-								<p> After initiating the ui you should see an image like this</p>
+      <p>After starting the UI you should see something like this:</p>
+      <figure><img src="images/mlflow_article/mlflowUI.png" alt="MLflow UI" loading="lazy"></figure>
 
-								<div class="image main"><img src="images/mlflow_article/mlflowUI.png" alt="" /></div>
-								
-								<h3>Mlflow step2 - run the first experience</h3>
-								<p> MLflow provides some methods to configurate the mlflow session, like:
+      <h3>Step 2: run the first experiment</h3>
+      <p>MLflow provides some methods to configure the MLflow session:</p>
+      <ul>
+        <li><code>mlflow.set_tracking_uri('http://xx.xx.x.xx:5000')</code> is very useful when the MLflow server runs on another machine. I recommend this, so your colleagues can access your results.</li>
+        <li><code>mlflow.set_experiment("Elastic Net")</code> creates sections, so you can better organize your experiments.</li>
+        <li><code>mlflow.start_run('name')</code> starts a new run. You can also give it a name.</li>
+        <li><code>mlflow.set_tag("mlflow.note.content", "Grid search")</code> adds notes to your runs. This helps you keep track of small details of an experiment that aren't expressed in the metrics, parameters or artifacts.</li>
+      </ul>
+      <p>After adding these blocks you should get a similar structure:</p>
+      <figure><img src="images/mlflow_article/runSetup.png" alt="MLflow run setup" loading="lazy"></figure>
+      <p>MLflow has 3 main ways to track information:</p>
+      <ul>
+        <li><code>mlflow.log_params('name', object, step)</code></li>
+        <li><code>mlflow.log_metrics('name', object, step)</code></li>
+        <li><code>mlflow.log_artifacts('name', object, step)</code></li>
+      </ul>
+      <p>Once your metrics are logged you can plot and compare them across models, which helps you choose the best one.</p>
+      <figure><img src="images/mlflow_article/modelComp.png" alt="MLflow model comparison" loading="lazy"></figure>
 
-									<ul>
-										<li>mlflow.set_tracking_uri('http://xx.xx.x.xx:5000')</li>
-										This is very useful when you have the mlflow client, running on a server. Which is something I recommend, 
-										in order for your colleages to have access your results.
-
-										<li>mlflow.set_experiment("Elastic Net")</li>
-										With this method you are able to create sections, in order to better organize the experiences
-
-										<li>mlflow.start_run('name')</li>
-										The goal of this command is just to setup up a new run. You can also give it a name.
-
-										<li>mlflow.set_tag("mlflow.note.content", "Greed search")</li>
-										With this method you can add note contents to your runs. This is very helpfull in order for you keep track of small
-										details of your experience that may not be expressed in the metrics/parameters/artifacts
-									</ul>
-
-									After adding this blocks you should get a similar structure. 
-									<div class="image main"><img src="images/mlflow_article/runSetup.png" alt="" /></div>
-
-									Mlfow has 3 main blocks to track information:
-									<ul>
-										<li> mlflow.log_params('name', object, step) </li>
-										<li> mlflow.log_metrics('name', object, step) </li>
-										<li> mlflow.log_artifacts('name', object, step) </li>
-									</ul>
-									
-									Once you have the metric logged you would be able to make plots, that can help you choose the model. 
-									You can compare the models. 
-
-									<div class="image main"><img src="images/mlflow_article/modelComp.png" alt="" /></div>
-
-								</p>
-								
-									<h2>Tips</h2>
-									In case you use a problem with epochs, I advise you to use the step params, because it will allow you a better comparison between epock.
-									The same could be used in k fold validation
-
-									<pre><code>import mlflow
+      <h2>Tips</h2>
+      <p>If your problem uses epochs, I advise you to use the <code>step</code> parameter, because it allows a better comparison between epochs. The same works for k-fold validation.</p>
+<pre><code>import mlflow
 mlflow.log_metrics('name', variable, step)</code></pre>
+      <figure><img src="images/mlflow_article/step_params.png" alt="MLflow metrics by step" loading="lazy"></figure>
 
-									<div class="image main"><img src="images/mlflow_article/step_params.png" alt="" /></div>
+      <h2>To sum up</h2>
+      <p>MLflow is in active development and has great features. I use MLflow Tracking daily. I found this tool when I started to have a lot of experiments and felt lost among all the notebooks.</p>
+      <p>&mdash; Tiago Cabo</p>
+    </main>
 
-									<h1>To sum up</h1>
-									<p>MLFlow is a tool of activily developent, with great features. I currently use MLflow tracking on my daily bases.
-										I found this tool when I start to have a lot of experiences, I felt lost between all the natebooks.
-									</p>
-									<p> Tiago Cabo</p>
-							</section>
+    <footer class="site-footer">
+      <span>&copy; Tiago Cabo &middot; Porto, Portugal</span>
+      <a href="mailto:ttiago.ccabo@gmail.com">ttiago.ccabo@gmail.com</a>
+    </footer>
 
-					</div>
-
-				<!-- Copyright -->
-				<div id="copyright">
-					<ul><li>&copy; Tiago Cabo</li><li>Design: <a href="https://html5up.net">
-						adapted with  <span style="color:red;">&hearts;</span> 
-						 HTML5 UP</a></li></ul>
-				</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </div>
+</body>
 </html>
