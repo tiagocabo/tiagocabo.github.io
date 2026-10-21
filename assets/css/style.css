@@ -50,22 +50,59 @@ img, video { max-width: 100%; display: block; }
 .page {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 48px var(--gutter-r) 64px var(--gutter);
+  padding: 64px var(--gutter-r) 64px var(--gutter);
 }
 
 /* Header */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.site-header-in {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px var(--gutter-r) 12px var(--gutter);
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  margin-bottom: 64px;
+  align-items: center;
+  gap: 16px;
 }
-.site-name { font-weight: 700; font-size: 18px; text-decoration: none; }
-.site-nav { display: flex; gap: 20px; font-size: 15px; color: var(--muted); }
-.site-nav a { text-decoration: none; padding-block: 8px; }
-.site-nav a:hover { color: var(--fg); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.mark {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fg);
+  color: var(--bg);
+  font: 600 13px/1 var(--mono);
+  letter-spacing: 0.02em;
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.brand-text strong { font-weight: 700; font-size: 16px; white-space: nowrap; }
+.brand-text span { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.site-nav { display: flex; align-items: center; gap: 4px; font-size: 15px; }
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.site-nav a:hover { color: var(--fg); background: var(--soft); }
+.site-nav a[aria-current="page"] { color: var(--fg); background: var(--soft); }
 
 /* Intro */
 .intro h1 {
@@ -115,6 +152,23 @@ img, video { max-width: 100%; display: block; }
   letter-spacing: 0.02em;
 }
 
+/* About */
+.about {
+  margin-top: 112px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 16px 28px;
+  scroll-margin-top: 80px;
+}
+.about h2 { font-size: 26px; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+.about-body { max-width: 62ch; }
+.about-body p { margin: 0 0 16px; }
+.about-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.about-links a { text-decoration-color: var(--line); text-underline-offset: 4px; }
+.about-links a:hover { text-decoration-color: currentColor; }
+
 /* Footer */
 .site-footer {
   margin-top: 96px;
@@ -142,6 +196,7 @@ img, video { max-width: 100%; display: block; }
   margin: 24px 0 12px;
   text-wrap: balance;
 }
+.article .dateline { font: 13px var(--mono); color: var(--muted); margin: 0 0 16px; }
 .article .lede { color: var(--muted); font-size: 19px; margin: 0 0 40px; }
 .article h2 { font-size: 26px; font-weight: 600; letter-spacing: -0.01em; margin: 56px 0 12px; }
 .article h3 { font-size: 19px; font-weight: 600; margin: 40px 0 8px; }
@@ -170,13 +225,28 @@ img, video { max-width: 100%; display: block; }
 
 @media (max-width: 600px) {
   body { font-size: 16px; }
-  .page { padding-top: 28px; }
-  .site-header { margin-bottom: 40px; }
+  .page { padding-top: 40px; }
+  .site-header-in { padding-block: 10px; }
+  .site-nav a { padding: 0 10px; min-width: 40px; justify-content: center; }
+  .nav-label { display: none; }
   .intro p { margin-bottom: 40px; }
   .grid { gap: 40px; }
+  .about { grid-template-columns: 1fr; margin-top: 80px; }
   .site-footer { margin-top: 64px; }
 }
 
+@media (max-width: 480px) {
+  .brand { gap: 10px; }
+  .brand-text span { display: none; }
+  .site-header-in { gap: 8px; }
+  .site-nav { gap: 0; font-size: 14px; }
+  .site-nav a { padding: 0 8px; min-width: 36px; }
+}
+
+@media (max-width: 350px) {
+  .mark { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .thumb img, .thumb video { transition: none; }
+  .thumb img, .thumb video, .site-nav a { transition: none; }
 }

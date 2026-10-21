@@ -14,16 +14,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="page">
-
-    <header class="site-header">
-      <a class="site-name" href="index.html">Tiago Cabo</a>
-      <nav class="site-nav">
+  <header class="site-header">
+    <div class="site-header-in">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">TC</span>
+        <span class="brand-text"><strong>Tiago Cabo</strong><span>Machine learning engineer &middot; Porto</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html#about">About</a>
         <a href="mlflow_article.html">Writing</a>
-        <a href="https://github.com/tiagocabo/" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/tiagocabo/" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="nav-label">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15zm4.94 12.24V6.17H2.54v7.22h2.4zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zm4.91 8.21V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4z"/></svg><span class="nav-label">LinkedIn</span></a>
       </nav>
-    </header>
+    </div>
+  </header>
+
+  <div class="page">
 
     <section class="intro">
       <h1>Machine learning experiments, <span>from search to streaming.</span></h1>
@@ -33,38 +39,20 @@
     <main class="grid">
 
       <article class="card">
-        <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/BM25-POC.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><video class="cover" src="images/posts/bm25.mp4" poster="images/posts/bm25.jpg" autoplay muted loop playsinline preload="none"></video></div>
-          <h2>BM25 search POC</h2>
-          <p>A quick search system over MovieLens built on the BM25 ranking function.</p>
-          <span class="meta">notebook · python · bm25</span>
-        </a>
-      </article>
-
-      <article class="card">
         <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/How-to-evaluate-BM25.ipynb" target="_blank" rel="noopener">
           <div class="thumb"><img src="images/beir_benchmark/beir.png" alt="BEIR benchmark logo" loading="lazy"></div>
           <h2>Evaluating IR with the BEIR benchmark</h2>
           <p>How to evaluate retrieval with BEIR, plus incremental indexing so new documents don't force a full re-index.</p>
-          <span class="meta">notebook · beir · ndcg</span>
+          <span class="meta"><time datetime="2023-12-03">Dec 2023</time> &middot; notebook · beir · ndcg</span>
         </a>
       </article>
 
       <article class="card">
-        <a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" rel="noopener">
-          <div class="thumb"><img src="images/recommender_systems/recommender_systems.png" alt="Recommender systems diagram" loading="lazy"></div>
-          <h2>Recommender systems</h2>
-          <p>Experiments with several recommender system techniques.</p>
-          <span class="meta">repo · python · collaborative filtering</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><img src="images/spark/Apache_Spark_logo.svg.png" alt="Apache Spark logo" loading="lazy"></div>
-          <h2>ALS recommendations with Spark</h2>
-          <p>Movie recommendations with alternating least squares, using Spark SQL and Spark ML.</p>
-          <span class="meta">notebook · pyspark · als</span>
+        <a href="https://github.com/tiagocabo/moviellens-ai-playground/blob/master/notebooks/BM25-POC.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/posts/bm25.mp4" poster="images/posts/bm25.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>BM25 search POC</h2>
+          <p>A quick search system over MovieLens built on the BM25 ranking function.</p>
+          <span class="meta"><time datetime="2023-10-08">Oct 2023</time> &middot; notebook · python · bm25</span>
         </a>
       </article>
 
@@ -73,7 +61,7 @@
           <div class="thumb"><img src="images/TFlite/TensorfloLitePredict.png" alt="TensorFlow Lite prediction" loading="lazy"></div>
           <h2>Post-training quantization with TF Lite</h2>
           <p>Quantizing an MNIST classifier cut inference time by more than 80&times; and shrank the model.</p>
-          <span class="meta">write-up · tensorflow · tflite</span>
+          <span class="meta"><time datetime="2022-09-10">Sep 2022</time> &middot; write-up · tensorflow · tflite</span>
         </a>
       </article>
 
@@ -82,79 +70,7 @@
           <div class="thumb"><img class="cover" src="images/diffusion/Panda_playing_chess.png" alt="Generated image of a panda playing chess" loading="lazy"></div>
           <h2>Experimenting with diffusion models</h2>
           <p>Hugging Face's open diffusion model, prompted with &ldquo;A panda playing chess.&rdquo;</p>
-          <span class="meta">colab · diffusers · hugging face</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><img src="images/time_series/Bidirectional-LSTM.png" alt="Bidirectional LSTM diagram" loading="lazy"></div>
-          <h2>Bidirectional LSTM forecasting</h2>
-          <p>Forecasting London shared-bike demand with a bidirectional LSTM.</p>
-          <span class="meta">notebook · keras · time series</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/number_guesser" target="_blank" rel="noopener">
-          <div class="thumb"><video class="cover" src="images/guess_number/number_guesser.mp4" poster="images/guess_number/number_guesser.jpg" autoplay muted loop playsinline preload="none"></video></div>
-          <h2>Guessing numbers with AI</h2>
-          <p>Handwritten digit recognition with DNNs and CNNs, with a drawing pad to test it.</p>
-          <span class="meta">repo · cnn · pygame</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><img src="images/time_series/Linear_regression.svg.png" alt="Linear regression plot" loading="lazy"></div>
-          <h2>Linear regression from scratch</h2>
-          <p>Deriving and implementing gradient descent for linear regression.</p>
-          <span class="meta">notebook · numpy · gradient descent</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="mlflow_article.html">
-          <div class="thumb"><img src="images/mlflow_logo.png" alt="MLflow logo" loading="lazy"></div>
-          <h2>Experiment tracking with MLflow</h2>
-          <p>Keep every run, parameter and metric of an ML project in one place.</p>
-          <span class="meta">article · mlflow · scikit-learn</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><video class="cover" src="images/spark/spark_stream.mp4" poster="images/spark/spark_stream.jpg" autoplay muted loop playsinline preload="none"></video></div>
-          <h2>Spark Streaming pipeline</h2>
-          <p>A streaming pipeline that flags hate speech in a Twitter feed.</p>
-          <span class="meta">notebook · spark streaming · nlp</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank" rel="noopener">
-          <div class="thumb"><video class="cover" src="images/kafka/kafka_test.mp4" poster="images/kafka/kafka_test.jpg" autoplay muted loop playsinline preload="none"></video></div>
-          <h2>First Kafka setup</h2>
-          <p>Running a Kafka worker locally, step by step.</p>
-          <span class="meta">notebook · kafka</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank" rel="noopener">
-          <div class="thumb"><img class="cover" src="images/jenkins/docker-jenkins.png" alt="Docker and Jenkins" loading="lazy"></div>
-          <h2>First Jenkins setup</h2>
-          <p>Building, testing and deploying a Python app from a Docker-hosted Jenkins.</p>
-          <span class="meta">tutorial · jenkins · docker</span>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame-exploration/pygame_tutorial.py" target="_blank" rel="noopener">
-          <div class="thumb"><video class="cover" src="images/pygame/pygame_draw.mp4" poster="images/pygame/pygame_draw.jpg" autoplay muted loop playsinline preload="none"></video></div>
-          <h2>First pygame</h2>
-          <p>The drawing tool behind the number guesser, built to learn pygame.</p>
-          <span class="meta">code · pygame</span>
+          <span class="meta"><time datetime="2022-09-09">Sep 2022</time> &middot; colab · diffusers · hugging face</span>
         </a>
       </article>
 
@@ -163,11 +79,110 @@
           <div class="thumb"><img class="cover" src="images/Acer/thermal_paste.png" alt="Laptop CPU with fresh thermal paste" loading="lazy"></div>
           <h2>Refurbishing a 5-year-old Acer E1-570G</h2>
           <p>Windows to Ubuntu 18.04 then 20.04, new thermal paste and a good dust clean.</p>
-          <span class="meta">write-up · ubuntu · hardware</span>
+          <span class="meta"><time datetime="2020-05-05">May 2020</time> &middot; write-up · ubuntu · hardware</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://www.jenkins.io/doc/tutorials/build-a-python-app-with-pyinstaller/" target="_blank" rel="noopener">
+          <div class="thumb"><img class="cover" src="images/jenkins/docker-jenkins.png" alt="Docker and Jenkins" loading="lazy"></div>
+          <h2>First Jenkins setup</h2>
+          <p>Building, testing and deploying a Python app from a Docker-hosted Jenkins.</p>
+          <span class="meta"><time datetime="2020-04-26">Apr 2020</time> &middot; tutorial · jenkins · docker</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/twitter_hate_speech.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/spark/spark_stream.mp4" poster="images/spark/spark_stream.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>Spark Streaming pipeline</h2>
+          <p>A streaming pipeline that flags hate speech in a Twitter feed.</p>
+          <span class="meta"><time datetime="2020-04-24">Apr 2020</time> &middot; notebook · spark streaming · nlp</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/streaming_pipelines/blob/master/Kafka%20setup.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/kafka/kafka_test.mp4" poster="images/kafka/kafka_test.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>First Kafka setup</h2>
+          <p>Running a Kafka worker locally, step by step.</p>
+          <span class="meta"><time datetime="2020-04-24">Apr 2020</time> &middot; notebook · kafka</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/Linear_regression_from_scratch.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/time_series/Linear_regression.svg.png" alt="Linear regression plot" loading="lazy"></div>
+          <h2>Linear regression from scratch</h2>
+          <p>Deriving and implementing gradient descent for linear regression.</p>
+          <span class="meta"><time datetime="2020-04-16">Apr 2020</time> &middot; notebook · numpy · gradient descent</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/Time-Series-Exercises/blob/master/LSTM_Forecasting.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/time_series/Bidirectional-LSTM.png" alt="Bidirectional LSTM diagram" loading="lazy"></div>
+          <h2>Bidirectional LSTM forecasting</h2>
+          <p>Forecasting London shared-bike demand with a bidirectional LSTM.</p>
+          <span class="meta"><time datetime="2020-04-15">Apr 2020</time> &middot; notebook · keras · time series</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/recommender_systems_examples/blob/master/movies_pyspark_recommendations.ipynb" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/spark/Apache_Spark_logo.svg.png" alt="Apache Spark logo" loading="lazy"></div>
+          <h2>ALS recommendations with Spark</h2>
+          <p>Movie recommendations with alternating least squares, using Spark SQL and Spark ML.</p>
+          <span class="meta"><time datetime="2020-04-14">Apr 2020</time> &middot; notebook · pyspark · als</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/number_guesser" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/guess_number/number_guesser.mp4" poster="images/guess_number/number_guesser.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>Guessing numbers with AI</h2>
+          <p>Handwritten digit recognition with DNNs and CNNs, with a drawing pad to test it.</p>
+          <span class="meta"><time datetime="2020-04-10">Apr 2020</time> &middot; repo · cnn · pygame</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/number_guesser/blob/master/pygame-exploration/pygame_tutorial.py" target="_blank" rel="noopener">
+          <div class="thumb"><video class="cover" src="images/pygame/pygame_draw.mp4" poster="images/pygame/pygame_draw.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <h2>First pygame</h2>
+          <p>The drawing tool behind the number guesser, built to learn pygame.</p>
+          <span class="meta"><time datetime="2020-04-09">Apr 2020</time> &middot; code · pygame</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/tiagocabo/recommender_systems_examples" target="_blank" rel="noopener">
+          <div class="thumb"><img src="images/recommender_systems/recommender_systems.png" alt="Recommender systems diagram" loading="lazy"></div>
+          <h2>Recommender systems</h2>
+          <p>Experiments with several recommender system techniques.</p>
+          <span class="meta"><time datetime="2020-04-02">Apr 2020</time> &middot; repo · python · collaborative filtering</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="mlflow_article.html">
+          <div class="thumb"><img src="images/mlflow_logo.png" alt="MLflow logo" loading="lazy"></div>
+          <h2>Experiment tracking with MLflow</h2>
+          <p>Keep every run, parameter and metric of an ML project in one place.</p>
+          <span class="meta"><time datetime="2020-03-31">Mar 2020</time> &middot; article · mlflow · scikit-learn</span>
         </a>
       </article>
 
     </main>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>I'm a machine learning engineer based in Porto, Portugal. I studied mechanical engineering at the Faculty of Engineering of the University of Porto (FEUP) before moving into machine learning.</p>
+        <p>This site collects the notebooks, proofs of concept and write-ups I've made along the way: search and recommender systems, deep learning experiments, and the tooling that gets models running, from MLflow tracking to Spark and Kafka pipelines.</p>
+        <p class="about-links"><a href="https://www.linkedin.com/in/tiagocabo/" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/tiagocabo/" target="_blank" rel="noopener">GitHub</a> <a href="mailto:ttiago.ccabo@gmail.com">ttiago.ccabo@gmail.com</a></p>
+      </div>
+    </section>
 
     <footer class="site-footer">
       <span>&copy; Tiago Cabo &middot; Porto, Portugal</span>
